@@ -52,7 +52,7 @@ body {
   font-size: 35px;
 }
 
-#gamerBorder {
+#gamerBoard {
   max-width: 600px;
   display: grid;
   grid: 1fr 1fr 1fr 1fr 1fr / 1fr 1fr 1fr 1fr;
