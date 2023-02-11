@@ -13,20 +13,41 @@ let techs = [
   "node",
   "react",
 ];
+let cards = null;
+startGame();
+function startGame() {
+  let cards = createCardsFromTechs(techs);
+  shuffleCards(cards);
+  console.log(cards)
+}
 
-createCardsFromTechs(techs);
+function shuffleCards(cards) {
+
+  let currentIdex = cards.length;
+  let randomIndex = 0;
+
+  while (currentIdex !== 0) {
+    randomIndex = Math.floor(Math.random() * currentIdex)
+    currentIdex--;
+
+    [cards[randomIndex], cards[currentIdex]] = [cards[currentIdex], cards[randomIndex]]
+  }
+}
+
 function createCardsFromTechs(techs) {
   let cards = [];
 
   for (let tech of techs) {
     cards.push(createPairFromTechs(tech));
   }
-  console.log(cards);
+  return cards.flatMap((pair) => pair);
 }
 
 function createPairFromTechs(tech) {
   return [
-    { id: createIdWithTechs(tech), icon: tech, flipped: false },
+    { id: createIdWithTechs(tech),
+      icon: tech,
+      flipped: false },
     {
       id: createIdWithTechs(tech),
       icon: tech,
