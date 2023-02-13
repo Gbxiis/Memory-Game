@@ -8,7 +8,7 @@ html,
 body {
   @import url("https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap");
   font-family: "Roboto Mono", monospace;
-  background-color: #4eb3de;
+  background-color: #c3e6d4;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -41,14 +41,16 @@ body {
 }
 
 .card_front {
-  background-color: #8de0a6;
+  background-color: #17181f;
   transform: rotateY(180deg);
 }
 
 .card_back {
-  color: #8de0a6;
+  color: white;
   text-shadow: 2px 2px 1px black;
-  background-color: #fcf09f;
+
+  background-color: #314d4a;
+
   font-size: 35px;
 }
 

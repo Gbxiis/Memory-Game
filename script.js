@@ -1,7 +1,7 @@
 const FRONT = "card_front";
 const BACK = "card_back";
 const CARD = "card";
-const ICON = 'icon'
+const ICON = "icon";
 
 let techs = [
   "bootstrap",
@@ -40,20 +40,20 @@ function initializeCards(cards) {
 }
 
 function createCardContent(card, cardElement) {
-  creatCardFace(FRONT,card,cardElement)
-  creatCardFace(BACK,card,cardElement)
+  creatCardFace(FRONT, card, cardElement);
+  creatCardFace(BACK, card, cardElement);
 }
 
-function creatCardFace(face,card,element){
-  let cardElementFace = document.createElement('div');
+function creatCardFace(face, card, element) {
+  let cardElementFace = document.createElement("div");
   cardElementFace.classList.add(face);
-  if(face === FRONT){
-      let iconElement = document.createElement('img');
-      iconElement.classList.add(ICON)
-      iconElement.src = "./images/" + card.icon + ".png"
-      cardElementFace.appendChild(iconElement);
-  }else{
-    cardElementFace.innerHTML = "&lt/&gt"
+  if (face === FRONT) {
+    let iconElement = document.createElement("img");
+    iconElement.classList.add(ICON);
+    iconElement.src = "./images/" + card.icon + ".png";
+    cardElementFace.appendChild(iconElement);
+  } else {
+    cardElementFace.innerHTML = "&lt/&gt";
   }
   element.appendChild(cardElementFace);
 }
@@ -96,4 +96,6 @@ function createIdWithTechs(tech) {
   return tech + parseInt(Math.random() * 1000);
 }
 
-function flipCard() {}
+function flipCard() {
+  this.classList.add("flip");
+}
