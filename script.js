@@ -46,6 +46,10 @@ function flipCard() {
     this.classList.add("flip");
     if (game.checkMatch()) {
       game.clearCards();
+      if(game.checkGameOver()){
+        let gameOverLayer = document.getElementById("gamerOver");
+        gameOverLayer.style.display = 'flex'
+      }
     } else {
       setTimeout(() => {
         let firstCardView = document.getElementById(game.firstCard.id);

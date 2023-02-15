@@ -18,6 +18,9 @@ let game = {
   },
 
   checkMatch: function () {
+    if(!this.firstCard || !this.secondCard){
+      return false
+    }
     return this.firstCard.icon === this.secondCard.icon;
   },
 
@@ -25,6 +28,9 @@ let game = {
     this.firstCard = null;
     this.secondCard = null;
     this.lockmode = false;
+  },
+  checkGameOver(){
+    return this.cards.filter(card => !card.flipped).length == 0
   },
   techs: [
     "bootstrap",
