@@ -19,4 +19,4 @@ HTML / CSS / JS
 
 Gabriel Bomfim
 
-https://www.linkedin.com/in/gabriel-bomfim-4b5447240/
+https://www.linkedin.com/in/gabriel-bomfim/
